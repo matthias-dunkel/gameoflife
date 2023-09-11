@@ -1,1 +1,1 @@
-# Simple implementationn of Conway's game of life in groovy
+# Simple implementation of Conway's game of life in groovy
