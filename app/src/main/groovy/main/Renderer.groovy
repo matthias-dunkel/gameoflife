@@ -41,18 +41,20 @@ class Renderer extends JFrame {
     int height;
     BoardDrawer drawer;
     Board board;
-    Renderer(Board board) {
+    int scale;
+    Renderer(Board board, int scale) {
         this.drawer = drawer
         this.board  = board
-        this.width  = this.board.size * 10
-        this.height = this.board.size * 10
+        this.width  = this.board.size * scale
+        this.height = this.board.size * scale
+        this.scale = scale
     }
 
     void setUpGui() {
         setTitle("Game of Life")
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
         setSize(this.width, this.height);
-        add(new BoardDrawer(this.board, 10));
+        add(new BoardDrawer(this.board, this.scale));
         setVisible(true);
     }
 }

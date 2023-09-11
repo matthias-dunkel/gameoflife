@@ -13,10 +13,10 @@ class App {
 
     static void main(String[] args) {
         Rule[] rules = [new ConwaySimplified()];
-        def board = new Board(80, rules);
+        def board = new Board(160, rules);
         board.initialize()
         
-        def renderer = new Renderer(board);
+        def renderer = new Renderer(board, 5);
         renderer.setUpGui()
     }
 }
